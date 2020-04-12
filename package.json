@@ -1,0 +1,22 @@
+{
+  "name": "if-method-chain",
+  "version": "1.0.0",
+  "description": "conditional method chain",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build:lib": "rm -rf ./lib && tsc ./index.ts --outDir ./lib --declaration",
+    "test": "jest"
+  },
+  "author": {
+    "name": "steelydylan",
+    "url": "https://horicdesign.com"
+  },
+  "homepage": "https://github.com/steelydylan/if-method-chain",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "jest": "^23.6.0",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.7.2"
+  }
+}
