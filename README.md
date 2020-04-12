@@ -9,6 +9,8 @@ $ npm install if-method-chain
 ## Usage
 
 ```ts
+import { ifMethodChain } from 'if-method-chain';
+
 const array = [1, 2, 3, 4, 5];
 const result = ifMethodChain<number[], number[]>(array, [
   (item) => item.map(item => item * 2),
@@ -21,6 +23,8 @@ console.log(array) // [1, 3, 5, 7, 9]
 if false, it will skip the conditional function.
 
 ```ts
+import { ifMethodChain } from 'if-method-chain';
+
 const result = ifMethodChain<number[], number[]>(array, [
   (item) => item.map(item => item * 2),
   [(item) => item.map(item => item - 1), false]
@@ -33,6 +37,8 @@ if the result is false, it will skipe the conditional function.
 
 
 ```ts
+import { ifMethodChain } from 'if-method-chain';
+
 const array = [1, 2, 3, 4, 5];
 const result = ifMethodChain<number[], number[]>(array, [
   (item) => item.map(item => item * 2),
@@ -56,7 +62,7 @@ type Query = firebase.firestore.Query;
 const searchWithUid = true;
 const useStartAfter = true;
 
-const snapshot = ifMethodChain<firebase.firestore.Query, ShapShot>(
+const snapshot = await ifMethodChain<firebase.firestore.Query, Promise<ShapShot>>(
   db.collection("blog"), 
   [
     (item: Query) => item.orderBy("createdAt", "desc"),
