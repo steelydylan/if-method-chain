@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build:lib": "rm -rf ./lib && tsc ./index.ts --outDir ./lib --declaration",
+    "build": "rm -rf ./lib && tsc ./index.ts --outDir ./lib --declaration",
     "test": "jest"
   },
   "author": {
