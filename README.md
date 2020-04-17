@@ -62,7 +62,7 @@ type Query = firebase.firestore.Query;
 const searchWithUid = true;
 const useStartAfter = true;
 
-const snapshot = await ifMethodChain<firebase.firestore.Query, Promise<ShapShot>>(
+const snapshot = await ifMethodChain<Query, Promise<ShapShot>>(
   db.collection("blog"), 
   [
     (item: Query) => item.orderBy("createdAt", "desc"),
