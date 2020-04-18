@@ -1,9 +1,10 @@
 {
-  "name": "if-method-chain",
+  "name": "@steelydylan/if-method-chain",
   "version": "1.0.2",
   "description": "conditional method chain",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "private": false,
   "scripts": {
     "build": "rm -rf ./lib && tsc ./index.ts --outDir ./lib --declaration",
     "test": "jest"
